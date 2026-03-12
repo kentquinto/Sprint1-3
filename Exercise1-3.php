@@ -1,13 +1,14 @@
 <?php
 $colors = ["Blue", "Yellow", "Black"];
 $letter = "l";
-$containLetter = true;
-foreach ($colors as $color) {
-    if (stripos($color, $letter) === false) {
-        $containLetter = false;
-        break;
+function checkLetterInColors($colors, $letter) {
+    foreach ($colors as $color) {
+        if (stripos($color, $letter) === false) {
+            return false;
+        }
     }
+    return true;
 }
-echo $containLetter? "true": "false";
-
+$result = checkLetterInColors($colors, $letter);
+echo $result? "true": "false";
 ?>
