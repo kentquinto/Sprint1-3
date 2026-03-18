@@ -5,9 +5,7 @@ $studentGrade = [
     "Hermione" => [10,10,10,10,10],
     "Weasley" => [5,5,5,5,5],
     "Draco" => [1,2,3,1,2]
-]
-;
-
+];
 function calculateAverageStudent($grades) {
     return array_sum($grades) / count($grades);
 }
